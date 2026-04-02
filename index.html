@@ -5,248 +5,562 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Mamadou Ndiaye LO</title>
   <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #162c6c;
+      --secondary: #eff6ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #dbe3f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.7;
-      background: #f9fafb;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #2563eb);
+      color: white;
+      text-align: center;
+      padding: 4.5rem 1.5rem 3.5rem;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 0.6rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 820px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .nav-inner a {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--primary);
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
       margin: auto;
     }
 
-    h1, h2, h3, h4 {
-      margin-bottom: 1rem;
-      font-weight: bold;
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.6rem;
+    }
+
+    h3, h4 {
+      margin-top: 0;
+      margin-bottom: 0.9rem;
     }
 
     p, li {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.75rem;
     }
 
     ul {
       margin: 0;
-      padding-left: 20px;
+      padding-left: 1.2rem;
     }
 
-    header {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    h2 {
-      color: #1e3a8a;
-      margin-top: 0;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #1e3a8a;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .projects {
+    .intro {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1.3fr 0.9fr;
       gap: 1.5rem;
-      margin-top: 1.5rem;
     }
 
     .card {
-      border: 1px solid #ddd;
+      border: 1px solid var(--border);
       padding: 1.5rem;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
-    .card h3, .card h4 {
-      margin-top: 0;
-      color: #1e3a8a;
+    .highlight {
+      background: var(--secondary);
     }
 
-    .card a {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1.3rem;
+    }
+
+    .timeline-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-meta {
+      color: var(--muted);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid,
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    .skill-card,
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .project-card h3,
+    .skill-card h3 {
+      color: var(--primary);
+    }
+
+    .button {
       display: inline-block;
-      margin-top: 0.8rem;
+      margin-top: 0.9rem;
       color: white;
-      background: #1e3a8a;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      background: var(--primary);
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .card a:hover {
-      background: #162c6c;
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
     }
 
-    .contact p {
-      margin: 0.5rem 0;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
     }
 
-    .contact a {
-      color: #1e3a8a;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
+    .contact-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #1e3a8a;
+      padding: 2rem 1rem;
+      background: var(--primary);
       color: white;
       margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 3.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Mamadou Ndiaye LO</h1>
-    <p>Géomaticien / Administrateur SIG</p>
+    <p>Ingénieur géospatial / Géomaticien – SIG, bases de données spatiales, webmapping et automatisation</p>
+    <div class="hero-badges">
+      <span class="badge">QGIS • ArcGIS • PostGIS</span>
+      <span class="badge">Webmapping • GeoServer • FME</span>
+      <span class="badge">Python • SQL • HTML/CSS</span>
+    </div>
   </header>
 
-  <section>
+  <nav>
+    <div class="nav-inner">
+      <a href="#apropos">À propos</a>
+      <a href="#experiences">Expériences</a>
+      <a href="#formations">Formations</a>
+      <a href="#competences">Compétences</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="apropos">
     <h2>À propos</h2>
-    <p>Géomaticien passionné par la transformation des données géographiques en véritables outils d’aide à la décision. 
-    Spécialisé en SIG, automatisation des processus et développement d’applications web innovantes, j’accompagne collectivités et organisations 
-    dans la valorisation stratégique de leurs données spatiales.</p>
+    <div class="intro">
+      <div class="card highlight">
+        <p>
+          Géomaticien passionné par la transformation des données géographiques en véritables outils d’aide à la décision.
+          Spécialisé en SIG, administration de bases de données spatiales, automatisation des traitements et développement
+          d’applications web cartographiques, j’accompagne les collectivités et organisations dans la structuration,
+          l’analyse et la valorisation stratégique de leurs données territoriales.
+        </p>
+        <p>
+          Mon objectif est de concevoir des solutions géomatiques fiables, utiles et évolutives, capables de répondre
+          à des besoins métiers concrets : diagnostic territorial, suivi des réseaux, diffusion de données, aide à la décision
+          et accompagnement des utilisateurs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Points forts</h3>
+        <ul>
+          <li>Administration SIG et bases PostgreSQL / PostGIS</li>
+          <li>Intégration multi-formats : vecteur, raster, LiDAR</li>
+          <li>Développement d’applications web SIG</li>
+          <li>Automatisation de workflows géospatiaux</li>
+          <li>Analyse spatiale et cartographie thématique</li>
+          <li>Formation et accompagnement des utilisateurs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>3+</strong>
+        <span>expériences en géomatique appliquée</span>
+      </div>
+      <div class="stat">
+        <strong>10+</strong>
+        <span>outils SIG et cartographiques maîtrisés</span>
+      </div>
+      <div class="stat">
+        <strong>SIG</strong>
+        <span>administration, analyse et diffusion des données</span>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section id="experiences">
     <h2>Expériences</h2>
-    <ul>
-      <li>
-        <strong>2024 – Géomaticien / Administrateur SIG – Pornic Agglo (Pornic, France)</strong>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-meta">Depuis mars 2026 • Grand Calais Terres &amp; Mers — Calais, France</div>
+        <h3>Géomaticien / Administrateur SIG</h3>
+        <ul>
+          <li>Administration et développement du Système d’Information Géographique basé sur la solution GEO – Business Geographic et son outil de webmapping.</li>
+          <li>Gestion et administration des bases de données géographiques PostgreSQL / PostGIS : structuration, nettoyage, automatisation et intégration des données spatiales.</li>
+          <li>Traitement et intégration de données géospatiales multi-formats : Shapefile, GeoPackage, raster et LiDAR.</li>
+          <li>Réalisation de relevés topographiques sur le terrain à l’aide de GPS / GNSS puis intégration des données dans le SIG.</li>
+          <li>Production de cartes thématiques et d’analyses spatiales pour l’aide à la décision des services communautaires.</li>
+          <li>Développement et amélioration des outils SIG internes ainsi que des workflows de traitement de données.</li>
+          <li>Support technique, accompagnement et formation des utilisateurs internes aux outils et applications SIG.</li>
+          <li>Accompagnement des services et promotion du SIG auprès des partenaires territoriaux.</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-meta">Novembre 2024 – Janvier 2026 • Pornic Agglomération — Pornic, France</div>
+        <h3>Géomaticien / Administrateur SIG</h3>
         <ul>
           <li>Développement d'applications web SIG pour la diffusion et l'exploitation des données géographiques.</li>
           <li>Contrôle qualité et mise à jour du Plan Corps de Rue Simplifié (PCRS).</li>
           <li>Contrôle, correction et intégration des plans de récolement dans la base de données SIG.</li>
           <li>Administration, maintenance et enrichissement des bases de données géographiques.</li>
-          <li>Gestion de projets SIG : planification, suivi, coordination des parties prenantes.</li>
+          <li>Gestion de projets SIG : planification, suivi et coordination des parties prenantes.</li>
           <li>Support technique et formation des utilisateurs internes aux outils et applications SIG.</li>
         </ul>
-      </li>
+      </article>
 
-      <li>
-        <strong>2023 – Chargé de projet attractivité territoriale – CNIS (Aubervilliers, France)</strong>
+      <article class="timeline-item">
+        <div class="timeline-meta">Mars 2023 – Septembre 2023 • CNIS — Aubervilliers, France</div>
+        <h3>Chargé de projet d’attractivité territoriale</h3>
         <ul>
           <li>Réalisation de cartographies détaillées pour l'analyse des dynamiques territoriales.</li>
-          <li>Conception et mise en œuvre d’enquêtes géospatiales.</li>
+          <li>Conception et mise en œuvre d’enquêtes géospatiales pour l’évaluation des besoins locaux.</li>
           <li>Création de livrables cartographiques interactifs pour la présentation des résultats.</li>
         </ul>
-      </li>
+      </article>
 
-      <li>
-        <strong>2022 – Projet mobilité douce et commerce – Université Paris Sorbonne Nord & Mairie de Gennevilliers (Paris, France)</strong>
+      <article class="timeline-item">
+        <div class="timeline-meta">Octobre 2022 – Mars 2023 • Université Paris Sorbonne Nord &amp; Mairie de Gennevilliers — Paris, France</div>
+        <h3>Chargé de projet mobilité douce et commerce</h3>
         <ul>
           <li>Analyse spatiale des flux de mobilité pour l'optimisation des infrastructures de transport.</li>
           <li>Cartographie des zones commerciales et évaluation de leur accessibilité.</li>
           <li>Collaboration avec les parties prenantes pour la conception de plans d'action basés sur les données géospatiales.</li>
         </ul>
-      </li>
-    </ul>
+      </article>
+    </div>
   </section>
 
-  <section>
+  <section id="formations">
     <h2>Formations</h2>
-    <ul>
-      <li><strong>2023</strong> – Certificat Supérieur en Géomatique Appliquée (ENSG – IGN)</li>
-      <li>Python appliqué à la géomatique, structuration de l’IG en bases relationnelles, webmapping avancé, télédétection radar et optique.</li>
-      <li><strong>2022</strong> – Master 2 Géographie, Territoire et Développement Durable (Paris Nord Sorbonne)</li>
-      <li>SIG, télédétection, modélisation spatiale, gestion durable des territoires.</li>
-      <li><strong>2021</strong> – Master 2 Aménagement & Environnement (Sorbonne)</li>
-      <li>Cartographie, gouvernance territoriale, méthodes quantitatives et enquêtes.</li>
-    </ul>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-meta">2023 – 2024</div>
+        <h3>Certificat Supérieur en Géomatique Appliquée — ENSG / IGN</h3>
+        <p>Python appliqué à la géomatique, structuration de l’information géographique en bases relationnelles, webmapping avancé, télédétection radar et optique.</p>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-meta">2022 – 2023</div>
+        <h3>Master 2 Géographie, Territoire et Développement Durable — Paris Nord Sorbonne</h3>
+        <p>SIG, télédétection, modélisation spatiale, aménagement durable et gestion territoriale.</p>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-meta">2020 – 2022</div>
+        <h3>Master Géographie, Aménagement, Environnement — Sorbonne</h3>
+        <p>Cartographie, gouvernance territoriale, développement durable, méthodes quantitatives et enquêtes.</p>
+      </article>
+    </div>
   </section>
 
-  <section>
+  <section id="competences">
     <h2>Compétences</h2>
-    <ul>
-      <li>SIG : QGIS, ArcGIS, ArcGIS Pro, FME, Geo Generateur, Geo Key, Geoserver, Umap...</li>
-      <li>Base de données : PostgreSQL/PostGIS, BDEAVER, administration SIG</li>
-      <li>Langages : Python, SQL, HTML et CSS</li>
-      <li>Webmapping & développement d’applications SIG</li>
-      <li>Cartographie, analyse spatiale et traitement d’images satellites</li>
-      <li>Outils : Illustrator, Inkscape, Autocad, Magrit, Canva</li>
-      <li>Pack Office : Excel, Word, PowerPoint</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>SIG &amp; cartographie</h3>
+        <ul>
+          <li>QGIS</li>
+          <li>ArcGIS / ArcGIS Pro</li>
+          <li>GEO Générateur</li>
+          <li>uMap</li>
+          <li>Magrit</li>
+          <li>GeoServer</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Bases de données spatiales</h3>
+        <ul>
+          <li>PostgreSQL / PostGIS</li>
+          <li>Administration SIG</li>
+          <li>Structuration et intégration de données</li>
+          <li>Requêtes SQL spatiales</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Développement &amp; automatisation</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HTML / CSS</li>
+          <li>FME</li>
+          <li>Webmapping</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Analyse de données géospatiales</h3>
+        <ul>
+          <li>Analyse spatiale</li>
+          <li>Cartographie thématique</li>
+          <li>Traitement d’images satellites</li>
+          <li>Intégration raster, vecteur et LiDAR</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>DAO &amp; outils graphiques</h3>
+        <ul>
+          <li>Adobe Illustrator</li>
+          <li>Inkscape</li>
+          <li>AutoCAD</li>
+          <li>Canva</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Outils complémentaires</h3>
+        <ul>
+          <li>Pack Office : Excel, Word, PowerPoint</li>
+          <li>Travail en équipe et accompagnement métier</li>
+          <li>Gestion du temps et autonomie</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section id="realisations">
     <h2>Mes réalisations SIG</h2>
 
-    <!-- Bloc avec lien vers l'application -->
     <div class="projects">
-      <div class="card">
-        <h3>Application Web SIG – Pornic Agglo</h3>
-        <p>Application publique de collecte des déchets.</p>
-        <a href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/" 
-           target="_blank" rel="noopener noreferrer">Voir l'application</a>
+      <div class="project-card">
+        <h3>Application Web SIG – Pornic Agglomération</h3>
+        <p>Application publique dédiée à la collecte des déchets, conçue pour faciliter l’accès aux informations géographiques et améliorer le service aux usagers.</p>
+        <a class="button" href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/" target="_blank" rel="noopener noreferrer">Voir l'application</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Administration SIG &amp; données territoriales</h3>
+        <p>Mise en qualité, structuration et diffusion des données géographiques pour des usages métiers, techniques et décisionnels.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Cartographie d’aide à la décision</h3>
+        <p>Production de cartes thématiques et d’analyses spatiales au service des collectivités, de l’aménagement et des politiques territoriales.</p>
       </div>
     </div>
 
-    <!-- Bloc texte -->
-    <div class="card" style="margin-top:2rem;">
+    <div class="card" style="margin-top: 1.5rem;">
       <h3>Autres réalisations et projets SIG</h3>
-      <p>Voici une sélection de projets et de réalisations menés dans le domaine de la géomatique et des Systèmes d’Information Géographique (SIG). 
-      Ils illustrent mes compétences techniques, ma capacité à concevoir des solutions sur mesure et mon engagement pour fournir aux collectivités et entreprises 
-      des outils fiables et innovants.</p>
+      <p>
+        Voici une sélection de projets et de réalisations menés dans le domaine de la géomatique et des Systèmes d’Information Géographique.
+        Ils illustrent ma capacité à concevoir des solutions utiles, robustes et adaptées aux besoins des collectivités et des services métiers.
+      </p>
 
       <h4>Développement d’applications SIG</h4>
       <ul>
-        <li>Applications métiers : Rando-Cyclo, Plan de déplacement des agents, gestion des crues.</li>
-        <li>Cartographie interactive et automatisation via SQL, HTML et CSS.</li>
+        <li>Applications métiers : Rando-Cyclo, plan de déplacement des agents, gestion des crues.</li>
+        <li>Cartographie interactive et adaptation des interfaces pour les besoins métiers.</li>
+        <li>Développement et amélioration continue d’outils de webmapping.</li>
       </ul>
 
-      <h4>Gestion et intégration de données</h4>
+      <h4>Gestion, contrôle et intégration de données</h4>
       <ul>
         <li>Intégration et exploitation de données PCRS.</li>
-        <li>Plans de récolement et bases PostGIS pour le suivi des réseaux.</li>
-        <li>Contrôle qualité et mise à jour régulière.</li>
+        <li>Contrôle, correction et intégration de plans de récolement dans les bases SIG.</li>
+        <li>Structuration, nettoyage et administration de bases PostgreSQL / PostGIS.</li>
+        <li>Traitement de données multi-formats : Shapefile, GeoPackage, raster et LiDAR.</li>
       </ul>
 
-      <h4>Modèles cartographiques et automatisation</h4>
+      <h4>Analyse spatiale et production cartographique</h4>
+      <ul>
+        <li>Création de cartes thématiques pour l’aide à la décision.</li>
+        <li>Diagnostic territorial, analyse des dynamiques locales et valorisation des données.</li>
+        <li>Évaluation de l’accessibilité, des mobilités et des besoins territoriaux.</li>
+      </ul>
+
+      <h4>Automatisation et workflows</h4>
       <ul>
         <li>Création de modèles d’impression cartographique normalisés.</li>
-        <li>Scripts et processus automatisés (SQL, Python, FME).</li>
+        <li>Scripts et processus automatisés via SQL, Python et FME.</li>
+        <li>Amélioration des workflows de traitement pour fiabiliser et accélérer les productions SIG.</li>
       </ul>
 
       <h4>Accompagnement et formation</h4>
       <ul>
-        <li>Rédaction de tutoriels et fiches pratiques.</li>
-        <li>Animation d’ateliers et sessions de formation.</li>
-        <li>Support technique et assistance personnalisée.</li>
+        <li>Support technique auprès des utilisateurs internes.</li>
+        <li>Animation de formations et accompagnement à la prise en main des outils SIG.</li>
+        <li>Promotion du SIG auprès des services et partenaires territoriaux.</li>
       </ul>
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>📧 Email : <a href="mailto:mamadoundiayelo60@gmail.com">mamadoundiayelo60@gmail.com</a></p>
-    <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b" target="_blank">Mamadou Ndiaye LO</a></p>
-    <p>📱 Téléphone : 07 49 10 84 98</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p><a href="mailto:mamadoundiayelo60@gmail.com">mamadoundiayelo60@gmail.com</a></p>
+      </div>
+      <div class="contact-item">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b" target="_blank" rel="noopener noreferrer">Mamadou Ndiaye LO</a></p>
+      </div>
+      <div class="contact-item">
+        <h3>Téléphone</h3>
+        <p>07 49 10 84 98</p>
+      </div>
+      <div class="contact-item">
+        <h3>Localisation</h3>
+        <p>Pornic / France</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 - Mamadou Ndiaye LO</p>
+    <p>© 2026 - Mamadou Ndiaye LO • Portfolio géomatique</p>
   </footer>
 </body>
 </html>
