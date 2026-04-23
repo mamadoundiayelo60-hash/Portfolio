@@ -258,6 +258,26 @@
         padding-top: 3.5rem;
       }
     }
+    .project-card {
+  overflow: hidden;
+}
+
+.project-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 12px;
+  background: #eef3f8;
+  border: 1px solid var(--border);
+}
+
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
   </style>
 </head>
 <body>
@@ -475,15 +495,23 @@ géospatiaux pour l’analyse territoriale et l’aide à la décision.
   <section id="realisations">
     <h2>Mes réalisations SIG</h2>
 
-    <div class="projects">
-      <div class="project-card">
-        <h3>Application Web SIG – Pornic Agglomération</h3>
-        <p>Application publique dédiée à la collecte des déchets, conçue pour faciliter l’accès aux informations géographiques et améliorer le service aux usagers.</p>
-        <a class="button" href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/" target="_blank" rel="noopener noreferrer">Voir l'application</a>
-      </div>
-
     <div class="project-card">
-      <h3>Visualisation météo dynamique – France</h3>
+  <h3>Visualisation météo dynamique – France</h3>
+
+  <p>
+    Animation des températures en France sur 24h réalisée avec Python
+    (GeoPandas, Matplotlib, API Open-Meteo). Ce projet met en valeur mes
+    compétences en data visualisation, automatisation et cartographie dynamique.
+  </p>
+
+  <div class="project-preview">
+    <img src="meteo_france_final.gif" alt="Animation météo France">
+  </div>
+
+  <a class="button" href="meteo_france_final.gif" target="_blank" rel="noopener noreferrer">
+    Voir l’animation
+  </a>
+</div>
 
   <p>
     Animation des températures en France sur 24h réalisée avec Python
