@@ -1,1 +1,126 @@
-const body=document.body,theme=document.querySelector('.theme'),menu=document.querySelector('.menu'),links=document.querySelector('.links');if(localStorage.getItem('theme')==='dark')body.classList.add('dark');theme.onclick=()=>{body.classList.toggle('dark');localStorage.setItem('theme',body.classList.contains('dark')?'dark':'light')};menu.onclick=()=>links.classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));const fmt=n=>new Intl.NumberFormat('fr-FR').format(n);const counters=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=+el.dataset.count,start=performance.now(),duration=1200;function step(t){const p=Math.min((t-start)/duration,1),v=1-Math.pow(1-p,3);el.textContent=fmt(Math.floor(target*v));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step);counters.unobserve(el)}),{threshold:.7});document.querySelectorAll('[data-count]').forEach(e=>counters.observe(e));
+const body = document.body;
+const theme = document.querySelector(".theme");
+const menu = document.querySelector(".menu");
+const links = document.querySelector(".links");
+
+/* Mode sombre */
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+}
+
+theme?.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        body.classList.contains("dark") ? "dark" : "light"
+    );
+});
+
+/* Menu mobile */
+menu?.addEventListener("click", () => {
+    links?.classList.toggle("open");
+});
+
+document.querySelectorAll(".links a").forEach((link) => {
+    link.addEventListener("click", () => {
+        links?.classList.remove("open");
+    });
+});
+
+/* Animations au défilement */
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
+
+document.querySelectorAll(".reveal").forEach((element) => {
+    observer.observe(element);
+});
+
+/* Compteurs */
+const formatter = new Intl.NumberFormat("fr-FR");
+
+const countersObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const element = entry.target;
+            const target = Number(element.dataset.count);
+            const start = performance.now();
+            const duration = 1200;
+
+            function animate(time) {
+                const progress = Math.min((time - start) / duration, 1);
+                const easing = 1 - Math.pow(1 - progress, 3);
+
+                element.textContent = formatter.format(
+                    Math.floor(target * easing)
+                );
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+            countersObserver.unobserve(element);
+        });
+    },
+    { threshold: 0.7 }
+);
+
+document.querySelectorAll("[data-count]").forEach((element) => {
+    countersObserver.observe(element);
+});
+
+/* Lightbox */
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-img");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt || "Aperçu du projet";
+
+    lightbox.classList.add("show");
+    body.classList.add("lightbox-open");
+}
+
+function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+
+    lightbox.classList.remove("show");
+    body.classList.remove("lightbox-open");
+    lightboxImage.src = "";
+}
+
+document.querySelectorAll(".project img").forEach((image) => {
+    image.addEventListener("click", () => {
+        openLightbox(image);
+    });
+});
+
+lightboxClose?.addEventListener("click", closeLightbox);
+
+lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+});
