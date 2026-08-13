@@ -1,189 +1,1493 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de Mamadou Ndiaye LO, géomaticien et développeur SIG Python/PostGIS.">
-  <title>Mamadou Ndiaye LO — Géomaticien & Développeur SIG</title>
-  <link rel="stylesheet" href="style.css?v=5">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio de Mamadou Ndiaye LO, géomaticien, Data SIG et développeur Python/PostGIS."
+  >
+
+  <title>
+    Mamadou Ndiaye LO — Géomaticien | Data & SIG | Python/PostGIS
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css?v=6"
+  >
 </head>
+
 <body>
+
+<!-- ===================================================== -->
+<!-- NAVIGATION -->
+<!-- ===================================================== -->
+
 <header class="topbar">
+
   <nav class="container nav">
-    <a class="logo" href="#accueil">MNL<span>.</span></a>
-    <button class="menu" aria-label="Ouvrir le menu">☰</button>
+
+    <a
+      class="logo"
+      href="#accueil"
+    >
+      MNL<span>.</span>
+    </a>
+
+    <button
+      class="menu"
+      aria-label="Ouvrir le menu"
+    >
+      ☰
+    </button>
+
     <div class="links">
-      <a href="#apropos">À propos</a>
-      <a href="#geocarto">GeoCartoEngine</a>
-      <a href="#projets">Projets</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#competences">Compétences</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#apropos">
+        À propos
+      </a>
+
+      <a href="#geocarto">
+        GeoCartoEngine
+      </a>
+
+      <a href="#geodashboard">
+        GeoDashboard
+      </a>
+
+      <a href="#projets">
+        Projets
+      </a>
+
+      <a href="#parcours">
+        Parcours
+      </a>
+
+      <a href="#competences">
+        Compétences
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </div>
-    <button class="theme" aria-label="Changer le thème">◝</button>
+
+    <button
+      class="theme"
+      aria-label="Changer le thème"
+    >
+      ◝
+    </button>
+
   </nav>
+
 </header>
 
+
 <main>
-<section id="accueil" class="hero">
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section
+  id="accueil"
+  class="hero"
+>
+
   <div class="container hero-grid">
+
     <div class="reveal">
-      <p class="eyebrow">GÉOMATIQUE • PYTHON • POSTGIS</p>
-      <h1>Mamadou<br>Ndiaye LO</h1>
-      <h2>Géomaticien & Développeur SIG</h2>
-      <p class="lead">Je conçois des solutions géospatiales utiles : automatisation Python, bases PostgreSQL/PostGIS, analyse spatiale, webmapping et cartographie d’aide à la décision.</p>
+
+      <p class="eyebrow">
+        GÉOMATIQUE • DATA • PYTHON • POSTGIS
+      </p>
+
+      <h1>
+        Mamadou<br>
+        Ndiaye LO
+      </h1>
+
+      <h2>
+        Géomaticien & Développeur SIG
+      </h2>
+
+      <p class="lead">
+
+        Je conçois des solutions géospatiales utiles :
+        automatisation Python, bases PostgreSQL/PostGIS,
+        analyse spatiale, applications SIG, webmapping
+        et cartographie d’aide à la décision.
+
+      </p>
+
       <div class="actions">
-        <a class="btn primary" href="#geocarto">Voir mes réalisations</a>
-        <a class="btn ghost" href="documents/CV_Mamadou_Ndiaye_LO.pdf" target="_blank">Télécharger mon CV</a>
+
+        <a
+          class="btn primary"
+          href="#geocarto"
+        >
+          Voir mes réalisations
+        </a>
+
+        <a
+          class="btn ghost"
+          href="documents/CV_Mamadou_Ndiaye_LO.pdf"
+          target="_blank"
+        >
+          Télécharger mon CV
+        </a>
+
       </div>
+
       <div class="social">
-        <a href="https://github.com/mamadoundiayelo60-hash" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b" target="_blank">LinkedIn</a>
-        <a href="mailto:mamadoundiayelo60@gmail.com">Email</a>
+
+        <a
+          href="https://github.com/mamadoundiayelo60-hash"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:mamadoundiayelo60@gmail.com"
+        >
+          Email
+        </a>
+
       </div>
+
     </div>
 
+
+    <!-- TERMINAL -->
+
     <div class="terminal reveal">
-      <div class="dots"><i></i><i></i><i></i></div>
+
+      <div class="dots">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
       <pre><code><span># GeoCartoEngine</span>
+
 from engine import MoteurReseau
 
 moteur = MoteurReseau()
+
 moteur.construire_graphe()
+
 moteur.calculer_accessibilite()
 
 <b>✓ 56 075 nœuds analysés</b>
 <b>✓ 68 446 bâtiments étudiés</b>
 <b>✓ Cartes PDF / PNG générées</b></code></pre>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- ===================================================== -->
+<!-- CHIFFRES -->
+<!-- ===================================================== -->
 
 <section class="numbers">
+
   <div class="container number-grid">
-    <article><strong data-count="3">0</strong><span>+</span><p>expériences en géomatique appliquée</p></article>
-    <article><strong data-count="500">0</strong><span>+</span><p>personnes accompagnées et formées</p></article>
-    <article><strong data-count="68446">0</strong><p>bâtiments analysés</p></article>
-    <article><strong data-count="56075">0</strong><p>nœuds du réseau routier</p></article>
-  </div>
-</section>
 
-<section id="apropos" class="section">
-  <div class="container about-grid">
-    <div class="reveal">
-      <p class="eyebrow">À PROPOS</p>
-      <h2>Des données géographiques aux outils métiers</h2>
-      <p>Géomaticien spécialisé en systèmes d’information géographique, bases de données spatiales et développement Python, j’interviens sur l’acquisition, l’intégration, l’analyse, l’automatisation et la diffusion des données.</p>
-      <p>Mon objectif est de transformer des problématiques territoriales en solutions robustes, simples et compréhensibles pour les utilisateurs et les décideurs.</p>
-    </div>
-    <div class="cards reveal">
-      <article><b>01</b><h3>Administration SIG</h3><p>Qualité, structuration, maintenance et gouvernance des données.</p></article>
-      <article><b>02</b><h3>Python & automatisation</h3><p>Scripts métiers, traitements reproductibles et workflows géospatiaux.</p></article>
-      <article><b>03</b><h3>PostgreSQL / PostGIS</h3><p>Modélisation, requêtes spatiales, intégration et optimisation.</p></article>
-      <article><b>04</b><h3>Webmapping</h3><p>Applications SIG, diffusion cartographique et accompagnement métier.</p></article>
-    </div>
-  </div>
-</section>
+    <article>
 
-<section id="geocarto" class="section soft">
-  <div class="container">
-    <header class="section-head reveal">
-      <p class="eyebrow">PROJET PHARE</p>
-      <h2>GeoCartoEngine</h2>
-      <p>Moteur SIG Python pour l’analyse d’accessibilité sur réseau routier et la génération automatique de cartes thématiques.</p>
-    </header>
-    <article class="featured reveal">
-      <div class="cover"><img src="images/banner.png" alt="Bannière GeoCartoEngine"></div>
-      <div class="content">
-        <div class="tags"><span>Python</span><span>GeoPandas</span><span>NetworkX</span><span>Shapely</span><span>SciPy</span><span>Git</span></div>
-        <h3>Analyse d’accessibilité spatiale automatisée</h3>
-        <p>Construction d’un graphe routier, index spatial KDTree, rattachement des bâtiments et équipements, calcul Multi-Source Dijkstra et restitution cartographique.
+      <strong data-count="3">
+        0
+      </strong>
 
-</p>
-        <ul>
-          <li>50 écoles primaires analysées</li>
-          <li>68 446 bâtiments étudiés</li>
-          <li>56 075 nœuds et 57 449 arêtes</li>
-          <li>Exports PNG, PDF et CSV</li>
-        </ul>
-        <a class="btn primary" href="https://github.com/mamadoundiayelo60-hash/GeoCartoEngine" target="_blank">Voir le projet GitHub</a>
-      </div>
+      <span>+</span>
+
+      <p>
+        expériences en géomatique appliquée
+      </p>
+
     </article>
+
+
+    <article>
+
+      <strong data-count="500">
+        0
+      </strong>
+
+      <span>+</span>
+
+      <p>
+        personnes accompagnées et formées
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <strong data-count="68446">
+        0
+      </strong>
+
+      <p>
+        bâtiments analysés
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <strong data-count="56075">
+        0
+      </strong>
+
+      <p>
+        nœuds du réseau routier
+      </p>
+
+    </article>
+
   </div>
+
 </section>
 
-<section id="projets" class="section">
-  <div class="container">
-    <header class="section-head reveal"><p class="eyebrow">RÉALISATIONS</p><h2>Projets SIG & visualisations</h2></header>
-    <div class="projects">
-      <article class="project reveal"><img src="images/01_repartition_equipements.png" alt="Carte de répartition des équipements"><div><small>CARTOGRAPHIE AUTOMATISÉE</small><h3>Répartition des équipements</h3><p>Carte thématique automatisée et indicateurs territoriaux.</p></div></article>
-      <article class="project reveal"><img src="images/02_densite_equipements.png" alt="Carte de densité des équipements"><div><small>ANALYSE SPATIALE</small><h3>Densité des équipements</h3><p>Calcul de densité et classification cartographique.</p></div></article>
-      <article class="project reveal"><img src="images/03_accessibilite_ecoles_primaires.png" alt="Carte d’accessibilité aux écoles primaires"><div><small>ANALYSE DE RÉSEAU</small><h3>Accessibilité aux écoles</h3><p>Analyse de desserte et restitution des niveaux d’accessibilité.</p></div></article>
-      <article class="project reveal"><img src="images/meteo_france_final.gif" alt="Animation météo dynamique en France"><div><small>DATAVISUALISATION</small><h3>Météo dynamique</h3><p>Animation des températures avec GeoPandas et Open-Meteo.</p></div></article>
-      <article class="project reveal"><img src="images/la_nuit_tombe_sur_la_france_final.gif" alt="Animation du coucher du soleil en France"><div><small>SPATIO-TEMPOREL</small><h3>La nuit tombe sur la France</h3><p>Animation du coucher du soleil avec Python et Astral.</p></div></article>
-      <article class="project text-only reveal"><div><small>WEBMAPPING</small><h3>Application collecte des déchets</h3><p>Application publique SIG développée pour Pornic Agglomération.</p><a href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/" target="_blank">Voir l’application →</a></div></article>
+
+<!-- ===================================================== -->
+<!-- À PROPOS -->
+<!-- ===================================================== -->
+
+<section
+  id="apropos"
+  class="section"
+>
+
+  <div class="container about-grid">
+
+    <div class="reveal">
+
+      <p class="eyebrow">
+        À PROPOS
+      </p>
+
+      <h2>
+        Des données géographiques aux outils métiers
+      </h2>
+
+      <p>
+
+        Géomaticien spécialisé en systèmes d’information
+        géographique, bases de données spatiales et
+        développement Python, j’interviens sur l’acquisition,
+        l’intégration, l’analyse, l’automatisation et la
+        diffusion des données.
+
+      </p>
+
+      <p>
+
+        Mon objectif est de transformer des problématiques
+        territoriales en solutions robustes, simples et
+        compréhensibles pour les utilisateurs et les décideurs.
+
+      </p>
+
     </div>
+
+
+    <div class="cards reveal">
+
+      <article>
+
+        <b>01</b>
+
+        <h3>
+          Administration SIG
+        </h3>
+
+        <p>
+          Qualité, structuration, maintenance,
+          droits d'accès et gouvernance des données.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <b>02</b>
+
+        <h3>
+          Python & automatisation
+        </h3>
+
+        <p>
+          Scripts métiers, traitements reproductibles
+          et workflows géospatiaux.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <b>03</b>
+
+        <h3>
+          PostgreSQL / PostGIS
+        </h3>
+
+        <p>
+          Modélisation, requêtes spatiales,
+          intégration et optimisation.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <b>04</b>
+
+        <h3>
+          Webmapping
+        </h3>
+
+        <p>
+          Applications SIG, diffusion cartographique
+          et accompagnement métier.
+        </p>
+
+      </article>
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="parcours" class="section dark">
+
+<!-- ===================================================== -->
+<!-- GEOCARTOENGINE -->
+<!-- ===================================================== -->
+
+<section
+  id="geocarto"
+  class="section soft"
+>
+
   <div class="container">
-    <header class="section-head reveal"><p class="eyebrow">PARCOURS</p><h2>Expériences professionnelles</h2></header>
-    <div class="timeline">
-      <article class="reveal"><time>Depuis mars 2026</time><div><h3>Géomaticien – Administrateur SIG</h3><b>Grand Calais Terres & Mers</b><p>Administration SIG, PostgreSQL/PostGIS, automatisation Python, analyses spatiales et formation des utilisateurs.</p></div></article>
-      <article class="reveal"><time>Nov. 2024 – Jan. 2026</time><div><h3>Géomaticien – Administrateur SIG</h3><b>Pornic Agglomération</b><p>Applications web SIG, PCRS, bases géographiques, projets SIG et accompagnement utilisateur.</p></div></article>
-      <article class="reveal"><time>Mars – Sept. 2023</time><div><h3>Chargé de projet d'attractivité territoriale</h3><b>CNIS</b><p>Cartographies analytiques, enquêtes géospatiales et livrables interactifs.</p></div></article>
-      <article class="reveal"><time>Oct. 2022 – Mars 2023</time><div><h3>Chargé de projet mobilité douce et commerce</h3><b>Université Paris Sorbonne Nord / Gennevilliers</b><p>Analyse des mobilités, cartographie commerciale et aide à la décision.</p></div></article>
-    </div>
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        PROJET PHARE
+      </p>
+
+      <h2>
+        GeoCartoEngine
+      </h2>
+
+      <p>
+
+        Moteur SIG Python pour l’analyse
+        d’accessibilité sur réseau routier,
+        la couverture territoriale
+        et la génération automatique
+        de cartes thématiques.
+
+      </p>
+
+    </header>
+
+
+    <article class="featured reveal">
+
+      <div class="cover">
+
+        <img
+          src="images/banner.png"
+          alt="Bannière GeoCartoEngine"
+        >
+
+      </div>
+
+
+      <div class="content">
+
+        <div class="tags">
+
+          <span>Python</span>
+          <span>GeoPandas</span>
+          <span>NetworkX</span>
+          <span>Shapely</span>
+          <span>SciPy</span>
+          <span>Git</span>
+
+        </div>
+
+        <h3>
+          Analyse spatiale automatisée
+        </h3>
+
+        <p>
+
+          Construction d’un graphe routier,
+          index spatial KDTree,
+          rattachement des bâtiments
+          et équipements,
+          calcul Multi-Source Dijkstra
+          et restitution cartographique.
+
+        </p>
+
+        <ul>
+
+          <li>
+            50 écoles primaires analysées
+          </li>
+
+          <li>
+            68 446 bâtiments étudiés
+          </li>
+
+          <li>
+            56 075 nœuds et 57 449 arêtes
+          </li>
+
+          <li>
+            Analyses de couverture territoriale
+          </li>
+
+          <li>
+            Cartographies thématiques automatisées
+          </li>
+
+          <li>
+            Exports PNG, PDF et CSV
+          </li>
+
+        </ul>
+
+        <a
+          class="btn primary"
+          href="https://github.com/mamadoundiayelo60-hash/GeoCartoEngine"
+          target="_blank"
+        >
+          Voir GeoCartoEngine sur GitHub
+        </a>
+
+      </div>
+
+    </article>
+
   </div>
+
 </section>
 
-<section id="competences" class="section">
-  <div class="container">
-    <header class="section-head reveal"><p class="eyebrow">COMPÉTENCES</p><h2>Stack technique</h2></header>
-    <div class="skills">
-      <article class="reveal"><h3>Développement</h3><p>Python • SQL • HTML • CSS • Git • GitHub</p></article>
-      <article class="reveal"><h3>SIG & analyse</h3><p>QGIS • ArcGIS Pro • GeoPandas • NetworkX • Shapely • FME</p></article>
-      <article class="reveal"><h3>Données & diffusion</h3><p>PostgreSQL • PostGIS • GeoServer • GEO • Webmapping • ETL</p></article>
-      <article class="reveal"><h3>Cartographie</h3><p>Matplotlib • Illustrator • Inkscape • AutoCAD • GIMP</p></article>
-    </div>
-  </div>
-</section>
+
+<!-- ===================================================== -->
+<!-- GALERIE GEOCARTOENGINE -->
+<!-- ===================================================== -->
 
 <section class="section">
-  <div class="container training reveal">
-    <div><p class="eyebrow">TRANSMISSION</p><h2>Plus de 500 personnes accompagnées</h2><p>Formations en SIG, Python, SQL et PostgreSQL/PostGIS en France, en Afrique de l'Ouest et en Afrique centrale.</p></div>
-    <strong>500<span>+</span></strong>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        GALERIE GEOCARTOENGINE
+      </p>
+
+      <h2>
+        Cartographies générées automatiquement
+      </h2>
+
+      <p>
+
+        Une sélection de productions réalisées
+        avec GeoCartoEngine :
+        accessibilité, couverture territoriale
+        et cartographies thématiques.
+
+      </p>
+
+    </header>
+
+
+    <div class="projects">
+
+
+      <!-- ACCESSIBILITÉ -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/03_accessibilite_ecoles_primaires.png"
+          alt="Accessibilité aux écoles primaires"
+        >
+
+        <div>
+
+          <small>
+            ANALYSE DE RÉSEAU
+          </small>
+
+          <h3>
+            Accessibilité aux écoles
+          </h3>
+
+          <p>
+            Analyse de desserte des écoles primaires
+            à partir du réseau routier.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CULTURE -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/calais_couverture_culture.png"
+          alt="Couverture culturelle à Calais"
+        >
+
+        <div>
+
+          <small>
+            COUVERTURE TERRITORIALE
+          </small>
+
+          <h3>
+            Couverture culturelle
+          </h3>
+
+          <p>
+            Analyse de la couverture territoriale
+            des équipements culturels.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SANTÉ -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/calais_couverture_sante.png"
+          alt="Couverture santé à Calais"
+        >
+
+        <div>
+
+          <small>
+            ACCESSIBILITÉ
+          </small>
+
+          <h3>
+            Couverture santé
+          </h3>
+
+          <p>
+            Analyse territoriale de l'accès
+            aux équipements de santé.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ADMINISTRATION -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/carte_administration_calais.png"
+          alt="Équipements administratifs à Calais"
+        >
+
+        <div>
+
+          <small>
+            CARTOGRAPHIE THÉMATIQUE
+          </small>
+
+          <h3>
+            Administration
+          </h3>
+
+          <p>
+            Répartition territoriale
+            des équipements administratifs.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ENVIRONNEMENT -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/carte_environnement_calais.png"
+          alt="Équipements environnementaux à Calais"
+        >
+
+        <div>
+
+          <small>
+            ANALYSE TERRITORIALE
+          </small>
+
+          <h3>
+            Environnement
+          </h3>
+
+          <p>
+            Cartographie automatisée
+            des équipements environnementaux.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- TOURISME -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/carte_tourisme_calais.png"
+          alt="Équipements touristiques à Calais"
+        >
+
+        <div>
+
+          <small>
+            CARTOGRAPHIE
+          </small>
+
+          <h3>
+            Tourisme
+          </h3>
+
+          <p>
+            Analyse et représentation
+            des équipements touristiques.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div class="gallery-action">
+
+      <a
+        class="btn primary"
+        href="https://github.com/mamadoundiayelo60-hash/GeoCartoEngine"
+        target="_blank"
+      >
+        Explorer le projet GeoCartoEngine
+      </a>
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="contact" class="section contact">
-  <div class="container reveal">
-    <p class="eyebrow">CONTACT</p>
-    <h2>Construisons des solutions géospatiales utiles</h2>
-    <p>Disponible pour des opportunités en géomatique, développement SIG, Python et données spatiales.</p>
-    <div class="actions">
-      <a class="btn primary" href="mailto:mamadoundiayelo60@gmail.com">Me contacter</a>
-      <a class="btn ghost" href="documents/CV_Mamadou_Ndiaye_LO.pdf" target="_blank">Télécharger mon CV</a>
-    </div>
-    <div class="contact-line"><span>Calais, France</span><a href="tel:+33749108498">07 49 10 84 98</a><a href="mailto:mamadoundiayelo60@gmail.com">mamadoundiayelo60@gmail.com</a></div>
+
+<!-- ===================================================== -->
+<!-- GEODASHBOARD -->
+<!-- ===================================================== -->
+
+<section
+  id="geodashboard"
+  class="section soft"
+>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        APPLICATION DATA & SIG
+      </p>
+
+      <h2>
+        GeoDashboard
+      </h2>
+
+      <p>
+
+        Plateforme Web SIG développée en Python
+        pour l'analyse territoriale,
+        la cartographie interactive
+        et la production automatisée
+        d'indicateurs géographiques.
+
+      </p>
+
+    </header>
+
+
+    <article class="featured reveal">
+
+      <div class="cover">
+
+        <img
+          src="images/geodashboard.png"
+          alt="Application GeoDashboard"
+        >
+
+      </div>
+
+
+      <div class="content">
+
+        <div class="tags">
+
+          <span>Python</span>
+          <span>GeoPandas</span>
+          <span>Pandas</span>
+          <span>Shapely</span>
+          <span>Streamlit</span>
+          <span>Folium</span>
+          <span>Leaflet</span>
+          <span>PostGIS</span>
+
+        </div>
+
+
+        <h3>
+          Plateforme interactive d'analyse territoriale
+        </h3>
+
+
+        <p>
+
+          GeoDashboard permet d'importer,
+          visualiser et analyser des données
+          géographiques directement depuis
+          une interface Web interactive.
+
+        </p>
+
+
+        <ul>
+
+          <li>
+            Import et gestion de couches SIG
+          </li>
+
+          <li>
+            Cartographie interactive
+          </li>
+
+          <li>
+            Sélection d'un territoire d'analyse
+          </li>
+
+          <li>
+            Buffer et intersection spatiale
+          </li>
+
+          <li>
+            Sélection et jointure spatiales
+          </li>
+
+          <li>
+            Analyse de couverture territoriale
+          </li>
+
+          <li>
+            Calcul automatique d'indicateurs
+          </li>
+
+          <li>
+            Export GeoPackage et GeoJSON
+          </li>
+
+          <li>
+            Sauvegarde de projets
+          </li>
+
+          <li>
+            Génération automatisée de rapports PDF
+          </li>
+
+        </ul>
+
+
+        <p class="version">
+
+          <strong>
+            Version 1.0 — développement actif
+          </strong>
+
+        </p>
+
+
+        <a
+          class="btn primary"
+          href="https://geodashboard-sig.streamlit.app"
+          target="_blank"
+        >
+          Voir l'application en ligne
+        </a>
+
+      </div>
+
+    </article>
+
   </div>
+
 </section>
+
+
+<!-- ===================================================== -->
+<!-- AUTRES PROJETS -->
+<!-- ===================================================== -->
+
+<section
+  id="projets"
+  class="section"
+>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        AUTRES RÉALISATIONS
+      </p>
+
+      <h2>
+        Projets SIG & datavisualisation
+      </h2>
+
+    </header>
+
+
+    <div class="projects">
+
+
+      <!-- RÉPARTITION -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/01_repartition_equipements.png"
+          alt="Carte de répartition des équipements"
+        >
+
+        <div>
+
+          <small>
+            CARTOGRAPHIE AUTOMATISÉE
+          </small>
+
+          <h3>
+            Répartition des équipements
+          </h3>
+
+          <p>
+            Carte thématique automatisée
+            et indicateurs territoriaux.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- DENSITÉ -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/02_densite_equipements.png"
+          alt="Carte de densité des équipements"
+        >
+
+        <div>
+
+          <small>
+            ANALYSE SPATIALE
+          </small>
+
+          <h3>
+            Densité des équipements
+          </h3>
+
+          <p>
+            Calcul de densité
+            et classification cartographique.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- MÉTÉO -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/meteo_france_final.gif"
+          alt="Animation météo dynamique en France"
+        >
+
+        <div>
+
+          <small>
+            DATAVISUALISATION
+          </small>
+
+          <h3>
+            Météo dynamique
+          </h3>
+
+          <p>
+            Animation des températures
+            avec GeoPandas et Open-Meteo.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- NUIT -->
+
+      <article class="project reveal">
+
+        <img
+          src="images/la_nuit_tombe_sur_la_france_final.gif"
+          alt="Animation du coucher du soleil en France"
+        >
+
+        <div>
+
+          <small>
+            SPATIO-TEMPOREL
+          </small>
+
+          <h3>
+            La nuit tombe sur la France
+          </h3>
+
+          <p>
+            Animation du coucher du soleil
+            avec Python et Astral.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PORNIC -->
+
+      <article class="project text-only reveal">
+
+        <div>
+
+          <small>
+            WEBMAPPING
+          </small>
+
+          <h3>
+            Application collecte des déchets
+          </h3>
+
+          <p>
+
+            Application publique SIG
+            développée pour Pornic Agglomération.
+
+          </p>
+
+          <a
+            href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/"
+            target="_blank"
+          >
+            Voir l’application →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- PARCOURS -->
+<!-- ===================================================== -->
+
+<section
+  id="parcours"
+  class="section dark"
+>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        PARCOURS
+      </p>
+
+      <h2>
+        Expériences professionnelles
+      </h2>
+
+    </header>
+
+
+    <div class="timeline">
+
+
+      <!-- GRAND CALAIS -->
+
+      <article class="reveal">
+
+        <time>
+          Depuis mars 2026
+        </time>
+
+        <div>
+
+          <h3>
+            Géomaticien – Administrateur SIG
+          </h3>
+
+          <b>
+            Grand Calais Terres & Mers
+          </b>
+
+          <p>
+
+            Administration d'un environnement SIG
+            utilisé par plus de 400 personnes,
+            gestion des droits,
+            PostgreSQL/PostGIS,
+            automatisation Python,
+            développement de 3 applications métiers
+            et amélioration de 5 applications existantes.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PORNIC -->
+
+      <article class="reveal">
+
+        <time>
+          Nov. 2024 – Jan. 2026
+        </time>
+
+        <div>
+
+          <h3>
+            Géomaticien – Administrateur SIG
+          </h3>
+
+          <b>
+            Pornic Agglomération
+          </b>
+
+          <p>
+
+            Environnement SIG utilisé par plus de 200 utilisateurs,
+            développement de 6 applications Web SIG,
+            gestion de bases géographiques,
+            PCRS et accompagnement des services métiers.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CNIS -->
+
+      <article class="reveal">
+
+        <time>
+          Mars – Sept. 2023
+        </time>
+
+        <div>
+
+          <h3>
+            Chargé de projet d'attractivité territoriale
+          </h3>
+
+          <b>
+            Centre Numérique d'Innovation Sociale
+          </b>
+
+          <p>
+
+            Cartographies analytiques,
+            enquêtes géospatiales
+            et livrables interactifs.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- GENNEVILLIERS -->
+
+      <article class="reveal">
+
+        <time>
+          Oct. 2022 – Mars 2023
+        </time>
+
+        <div>
+
+          <h3>
+            Chargé de projet mobilité douce et commerce
+          </h3>
+
+          <b>
+            Université Paris Sorbonne Nord / Gennevilliers
+          </b>
+
+          <p>
+
+            Analyse des mobilités,
+            cartographie commerciale
+            et aide à la décision territoriale.
+
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- COMPÉTENCES -->
+<!-- ===================================================== -->
+
+<section
+  id="competences"
+  class="section"
+>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        COMPÉTENCES
+      </p>
+
+      <h2>
+        Stack technique
+      </h2>
+
+    </header>
+
+
+    <div class="skills">
+
+      <article class="reveal">
+
+        <h3>
+          Développement & Data
+        </h3>
+
+        <p>
+          Python • SQL • Pandas • GeoPandas •
+          HTML • CSS • Git • GitHub
+        </p>
+
+      </article>
+
+
+      <article class="reveal">
+
+        <h3>
+          SIG & analyse
+        </h3>
+
+        <p>
+          QGIS • ArcGIS Pro • GeoPandas •
+          NetworkX • Shapely • FME
+        </p>
+
+      </article>
+
+
+      <article class="reveal">
+
+        <h3>
+          Bases & diffusion
+        </h3>
+
+        <p>
+          PostgreSQL • PostGIS • GeoServer •
+          GEO • Streamlit • Folium • Leaflet • ETL
+        </p>
+
+      </article>
+
+
+      <article class="reveal">
+
+        <h3>
+          Cartographie
+        </h3>
+
+        <p>
+          Matplotlib • Illustrator •
+          Inkscape • AutoCAD • GIMP
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- TRANSMISSION -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+  <div class="container training reveal">
+
+    <div>
+
+      <p class="eyebrow">
+        TRANSMISSION
+      </p>
+
+      <h2>
+        Plus de 500 personnes accompagnées
+      </h2>
+
+      <p>
+
+        Formations et accompagnement en SIG,
+        Python, SQL et PostgreSQL/PostGIS
+        en France, en Afrique de l'Ouest
+        et en Afrique centrale.
+
+      </p>
+
+    </div>
+
+    <strong>
+      500<span>+</span>
+    </strong>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- CONTACT -->
+<!-- ===================================================== -->
+
+<section
+  id="contact"
+  class="section contact"
+>
+
+  <div class="container reveal">
+
+    <p class="eyebrow">
+      CONTACT
+    </p>
+
+    <h2>
+      Construisons des solutions géospatiales utiles
+    </h2>
+
+    <p>
+
+      Disponible pour des opportunités
+      en Data, géomatique, développement SIG,
+      Python et données spatiales.
+
+    </p>
+
+
+    <div class="actions">
+
+      <a
+        class="btn primary"
+        href="mailto:mamadoundiayelo60@gmail.com"
+      >
+        Me contacter
+      </a>
+
+      <a
+        class="btn ghost"
+        href="documents/CV_Mamadou_Ndiaye_LO.pdf"
+        target="_blank"
+      >
+        Télécharger mon CV
+      </a>
+
+    </div>
+
+
+    <div class="contact-line">
+
+      <span>
+        Calais, France
+      </span>
+
+      <a href="tel:+33749108498">
+        07 49 10 84 98
+      </a>
+
+      <a href="mailto:mamadoundiayelo60@gmail.com">
+        mamadoundiayelo60@gmail.com
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 </main>
 
-<footer><div class="container"><p>© 2026 Mamadou Ndiaye LO</p><p><a href="https://github.com/mamadoundiayelo60-hash">GitHub</a> • <a href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b">LinkedIn</a></p></div></footer>
-<div id="lightbox" class="lightbox">
-    <button
-        type="button"
-        class="lightbox-close"
-        aria-label="Fermer l’image"
-    >
-        ×
-    </button>
 
-    <img id="lightbox-img" src="" alt="Aperçu du projet">
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 Mamadou Ndiaye LO
+    </p>
+
+    <p>
+
+      <a
+        href="https://github.com/mamadoundiayelo60-hash"
+        target="_blank"
+      >
+        GitHub
+      </a>
+
+      •
+
+      <a
+        href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+<!-- ===================================================== -->
+<!-- LIGHTBOX -->
+<!-- ===================================================== -->
+
+<div
+  id="lightbox"
+  class="lightbox"
+>
+
+  <button
+    type="button"
+    class="lightbox-close"
+    aria-label="Fermer l’image"
+  >
+    ×
+  </button>
+
+  <img
+    id="lightbox-img"
+    src=""
+    alt="Aperçu du projet"
+  >
+
 </div>
 
+
 <script src="script.js?v=4"></script>
+
 </body>
+
 </html>
