@@ -62,6 +62,10 @@
         GeoDashboard
       </a>
 
+      <a href="#coastwatch">
+        CoastWatch
+      </a>
+
       <a href="#projets">
         Projets
       </a>
@@ -117,22 +121,14 @@
       </h1>
 
       <h2>
-       <h2>
-  Géomaticien | Data & SIG | Développement Python
-</h2>
+        Géomaticien | Data & SIG | Développement Python
       </h2>
 
       <p class="lead">
-
-        <p class="lead">
-
-  Je conçois des solutions Data & SIG :
-  automatisation Python, bases PostgreSQL/PostGIS,
-  analyse spatiale, applications web SIG,
-  webmapping et outils d’aide à la décision.
-
-</p>.
-
+        Je conçois des solutions Data & SIG :
+        automatisation Python, bases PostgreSQL/PostGIS,
+        analyse spatiale, applications web SIG,
+        webmapping et outils d’aide à la décision.
       </p>
 
       <div class="actions">
@@ -195,7 +191,8 @@
 
 projects = [
     "GeoCartoEngine",
-    "GeoDashboard"
+    "GeoDashboard",
+    "CoastWatch"
 ]
 
 stack = [
@@ -274,7 +271,7 @@ stack = [
 
     <article>
 
-      <strong data-count="5">
+      <strong data-count="6">
         0
       </strong>
 
@@ -886,6 +883,111 @@ stack = [
         >
           Voir l'application en ligne
         </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- COASTWATCH -->
+<!-- ===================================================== -->
+
+<section
+  id="coastwatch"
+  class="section"
+>
+
+  <div class="container">
+
+    <header class="section-head reveal">
+
+      <p class="eyebrow">
+        GÉOMATIQUE LITTORALE • DATA ENGINEERING
+      </p>
+
+      <h2>
+        CoastWatch
+      </h2>
+
+      <p>
+        Application web géomatique de suivi du trait de côte,
+        conçue pour automatiser l'analyse des dynamiques
+        d'érosion et d'accrétion.
+      </p>
+
+    </header>
+
+
+    <article class="featured reveal">
+
+      <div class="cover">
+
+        <img
+          src="images/coastwatch-dashboard.png"
+          alt="Tableau de bord CoastWatch consacré à l'érosion côtière à Calais"
+        >
+
+      </div>
+
+
+      <div class="content">
+
+        <div class="tags">
+          <span>Python</span>
+          <span>GeoPandas</span>
+          <span>Shapely</span>
+          <span>PostGIS</span>
+          <span>Streamlit</span>
+          <span>Folium</span>
+          <span>Plotly</span>
+          <span>Docker</span>
+        </div>
+
+        <h3>
+          Analyse reproductible de l'évolution du trait de côte
+        </h3>
+
+        <p>
+          CoastWatch transforme deux positions datées du trait de côte
+          en transects, déplacements signés, taux annuels et indicateurs
+          sectoriels. Les résultats sont explorables sur une carte interactive
+          et exportables dans un rapport PDF automatisé.
+        </p>
+
+        <ul>
+          <li>Import GeoJSON, GeoPackage et Shapefile ZIP</li>
+          <li>Analyse de 5 km au moyen de 100 transects et 10 secteurs</li>
+          <li>Classification des dynamiques d'érosion et d'accrétion</li>
+          <li>Carte Folium et séries temporelles Plotly</li>
+          <li>Stockage interchangeable GeoPackage ou PostgreSQL/PostGIS</li>
+          <li>Rapport PDF de synthèse généré automatiquement</li>
+          <li>34 tests automatisés et 82 % de couverture</li>
+        </ul>
+
+        <div class="actions">
+          <a
+            class="btn primary"
+            href="https://erosion-cotiere-calais.streamlit.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tester l'application
+          </a>
+
+          <a
+            class="btn ghost"
+            href="https://github.com/mamadoundiayelo60-hash/coastwatch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le code source
+          </a>
+        </div>
 
       </div>
 
