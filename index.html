@@ -38,7 +38,9 @@
         <p class="hero-lead">Géomaticien et administrateur SIG, je conçois des applications web, des automatisations Python/PostGIS et des extensions QGIS qui rendent l’analyse spatiale directement exploitable par les métiers.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projets">Découvrir mes projets <span>↘</span></a>
-         </div>
+          <a class="button secondary" href="documents/CV_Mamadou_Ndiaye_LO.pdf" download>Télécharger mon CV ↓</a>
+          <a class="button secondary" href="https://github.com/mamadoundiayelo60-hash" target="_blank" rel="noopener">Voir mon GitHub ↗</a>
+        </div>
         <div class="availability"><i></i><span>Basé à Calais · Ouvert aux opportunités SIG / Data / Python</span></div>
       </div>
 
@@ -56,9 +58,9 @@
     <section class="proof-band" aria-label="Chiffres clés">
       <div class="shell proof-grid">
         <div><strong>3+</strong><span>expériences en géomatique appliquée</span></div>
-        <div><strong>500+</strong><span>personnes formées ou accompagnées</span></div>
-        <div><strong>4</strong><span>produits SIG documentés et publics</span></div>
-        <div><strong>10+</strong><span>applications crées</span></div>
+        <div><strong>500+</strong><span>personnes accompagnées en SIG, SQL, PostgreSQL/PostGIS et Python</span></div>
+        <div><strong>5</strong><span>produits SIG documentés et publics</span></div>
+        <div><strong>2</strong><span>applications déployées en ligne</span></div>
       </div>
     </section>
 
@@ -145,11 +147,63 @@
           </div>
         </article>
 
-        <article class="compact-project reveal">
-          <div><p class="project-index">04 / MOTEUR D’ANALYSE</p><h3>GeoCartoEngine</h3><p>Moteur Python d’analyse d’accessibilité sur réseau routier et de couverture territoriale : graphe, KDTree, Multi-Source Dijkstra et exports cartographiques automatisés.</p></div>
-          <div class="compact-stats"><span><strong>68 446</strong>bâtiments analysés</span><span><strong>56 075</strong>nœuds réseau</span></div>
-          <a class="round-link" href="https://github.com/mamadoundiayelo60-hash/GeoCartoEngine" target="_blank" rel="noopener" aria-label="Voir GeoCartoEngine sur GitHub">↗</a>
+        <article class="project project-reverse reveal">
+          <div class="project-media pornic-preview" role="img" aria-label="Aperçu de l'application publique de collecte des déchets de Pornic Agglomération">
+            <span class="live-badge"><i></i> Application publique</span>
+            <div class="pornic-map"><span class="route route-a"></span><span class="route route-b"></span><i class="bin bin-a"></i><i class="bin bin-b"></i><i class="bin bin-c"></i><i class="bin bin-d"></i></div>
+            <div class="pornic-panel"><small>SERVICE PUBLIC</small><strong>Collecte des déchets</strong><span>Recherche territoriale · information usager</span></div>
+          </div>
+          <div class="project-content">
+            <div class="project-index">04 / APPLICATION MÉTIER EN COLLECTIVITÉ</div>
+            <h3>Pornic Agglo —<br><em>Collecte des déchets</em></h3>
+            <p>Application publique SIG développée pour Pornic Agglomération afin de rendre l’information de collecte plus lisible et directement accessible aux habitants.</p>
+            <ul class="feature-list">
+              <li>Consultation cartographique par secteur</li>
+              <li>Recherche et information territorialisée</li>
+              <li>Diffusion d’une donnée métier vers le grand public</li>
+              <li>Interface intégrée au portail cartographique de la collectivité</li>
+            </ul>
+            <div class="tags"><span>Web SIG</span><span>Cartographie métier</span><span>Collectivité</span><span>Service public</span></div>
+            <div class="project-links"><a class="button primary" href="https://carto.pornicagglo.fr/adws/app/64a14ebb-f418-11ef-b7ce-cffcd607d261/" target="_blank" rel="noopener">Voir l’application ↗</a></div>
+          </div>
         </article>
+
+        <article class="engine-showcase reveal">
+          <div class="project-content engine-intro">
+            <div class="project-index">05 / MOTEUR D’ANALYSE ET DE PRODUCTION</div>
+            <h3>GeoCartoEngine —<br><em>cartes générées automatiquement</em></h3>
+            <p>Une chaîne Python reproductible transforme les données territoriales en analyses de couverture et en cartes professionnelles prêtes à diffuser. La galerie présente directement les livrables produits, sans exposer le code.</p>
+            <div class="tags"><span>Python</span><span>GeoPandas</span><span>Analyse spatiale</span><span>Matplotlib</span><span>Automatisation</span></div>
+            <p class="gallery-hint">Cliquez sur une carte pour l’examiner en plein écran.</p>
+          </div>
+          <div class="map-gallery" aria-label="Galerie des cartes produites par GeoCartoEngine">
+            <button class="map-card map-card-featured" type="button" data-gallery-src="images/03_accessibilite_ecoles_primaires.png" data-gallery-title="Accessibilité aux écoles primaires"><img src="images/03_accessibilite_ecoles_primaires.png" alt="Carte d’accessibilité aux écoles primaires à Calais" loading="lazy"><span>Accessibilité aux écoles primaires</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/calais_couverture_sante.png" data-gallery-title="Couverture des équipements de santé"><img src="images/calais_couverture_sante.png" alt="Carte de couverture des équipements de santé à Calais" loading="lazy"><span>Santé</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/calais_couverture_culture.png" data-gallery-title="Couverture des équipements culturels"><img src="images/calais_couverture_culture.png" alt="Carte de couverture des équipements culturels à Calais" loading="lazy"><span>Culture</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_sport_calais.png" data-gallery-title="Accessibilité aux équipements sportifs"><img src="images/carte_sport_calais.png" alt="Carte d’accessibilité aux équipements sportifs à Calais" loading="lazy"><span>Sport</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_administration_calais.png" data-gallery-title="Accès aux services administratifs"><img src="images/carte_administration_calais.png" alt="Carte d’accès aux services administratifs à Calais" loading="lazy"><span>Administration</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_loisirs_calais.png" data-gallery-title="Couverture des équipements de loisirs"><img src="images/carte_loisirs_calais.png" alt="Carte de couverture des équipements de loisirs à Calais" loading="lazy"><span>Loisirs</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_patrimoine_calais.png" data-gallery-title="Proximité du patrimoine"><img src="images/carte_patrimoine_calais.png" alt="Carte de proximité des éléments patrimoniaux à Calais" loading="lazy"><span>Patrimoine</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_social_calais.png" data-gallery-title="Couverture des équipements sociaux"><img src="images/carte_social_calais.png" alt="Carte de couverture des équipements sociaux à Calais" loading="lazy"><span>Action sociale</span></button>
+            <button class="map-card" type="button" data-gallery-src="images/carte_culte_calais.png" data-gallery-title="Répartition des lieux de culte"><img src="images/carte_culte_calais.png" alt="Carte de répartition des lieux de culte à Calais" loading="lazy"><span>Lieux de culte</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section motion-section" id="animations">
+      <div class="shell">
+        <header class="section-heading reveal"><p class="kicker"><span></span> DATA VISUALISATION</p><h2>Rendre visible la dimension <em>spatio-temporelle.</em></h2><p>Deux expérimentations Python montrent ma capacité à transformer une succession de données en récit cartographique animé.</p></header>
+        <div class="motion-grid">
+          <article class="motion-card reveal">
+            <button class="motion-visual" type="button" data-gallery-src="images/meteo_france_final.gif" data-gallery-title="Températures en France sur 24 heures"><img src="images/meteo_france_final.gif" alt="Animation des températures en France sur 24 heures" loading="lazy"><span>Agrandir ↗</span></button>
+            <div class="motion-copy"><small>PYTHON · GEOPANDAS · OPEN-METEO</small><h3>Météo dynamique</h3><p>Animation de l’évolution des températures en France à partir de données météorologiques temporelles.</p></div>
+          </article>
+          <article class="motion-card reveal">
+            <button class="motion-visual" type="button" data-gallery-src="images/la_nuit_tombe_sur_la_france_final.gif" data-gallery-title="La nuit tombe sur la France"><img src="images/la_nuit_tombe_sur_la_france_final.gif" alt="Visualisation spatio-temporelle du coucher du soleil en France" loading="lazy"><span>Agrandir ↗</span></button>
+            <div class="motion-copy"><small>PYTHON · ASTRAL · TEMPS</small><h3>La nuit tombe sur la France</h3><p>Animation spatio-temporelle du coucher du soleil, calculée selon la date et la position géographique.</p></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -158,7 +212,9 @@
       <div class="timeline">
         <article class="timeline-item reveal"><time>Depuis mars 2026</time><div><h3>Géomaticien — Administrateur SIG</h3><strong>Grand Calais Terres & Mers</strong><p>Administration d’un environnement SIG utilisé par plus de 400 personnes, PostgreSQL/PostGIS, droits d’accès, automatisations Python et développement d’applications métiers. Suivi littoral par campagnes GNSS et profils de plage/dune.</p></div></article>
         <article class="timeline-item reveal"><time>Nov. 2024 — Jan. 2026</time><div><h3>Géomaticien — Administrateur SIG</h3><strong>Pornic Agglomération</strong><p>Administration de bases géographiques, développement de six applications web SIG, PCRS, diffusion cartographique et accompagnement des services métiers.</p></div></article>
-        <article class="timeline-item reveal"><time>2022 — 2023</time><div><h3>Chargé de projets territoriaux</h3><strong>CNIS · Université Sorbonne Paris Nord</strong><p>Analyses de mobilité, attractivité territoriale, cartographie commerciale et productions interactives d’aide à la décision.</p></div></article>
+        <article class="timeline-item reveal"><time>Mars — Sept. 2023</time><div><h3>Chargé de projet d’attractivité territoriale</h3><strong>Centre Numérique d’Innovation Sociale</strong><p>Cartographies analytiques, enquêtes géospatiales et conception de livrables interactifs au service du diagnostic et de l’attractivité territoriale.</p></div></article>
+        <article class="timeline-item reveal"><time>Oct. 2022 — Mars 2023</time><div><h3>Chargé de projet mobilité douce et commerce</h3><strong>Université Paris Sorbonne Nord / Gennevilliers</strong><p>Analyse des mobilités, cartographie commerciale et production d’outils d’aide à la décision territoriale.</p></div></article>
+        <article class="timeline-item training-item reveal"><time>Transmission</time><div><h3>Formation et accompagnement de plus de 500 personnes</h3><strong>SIG · SQL · PostgreSQL/PostGIS · Python</strong><p>Accompagnement progressif sur la gestion de données géographiques, les requêtes spatiales, l’administration de bases PostGIS et l’automatisation de traitements géomatiques en Python.</p></div></article>
       </div>
     </section>
 
@@ -178,11 +234,16 @@
         <p class="kicker"><span></span> CONTACT</p>
         <h2>Vous cherchez un profil capable de relier <em>territoire, données et développement&nbsp;?</em></h2>
         <p>Échangeons autour de vos besoins en géomatique, Data SIG, PostgreSQL/PostGIS ou développement Python.</p>
-        <div class="contact-actions"><a class="button light" href="mailto:mamadoundiayelo60@gmail.com">M’écrire par e-mail ↗</a><a class="button outline-light" href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+        <div class="contact-actions"><a class="button light" href="documents/CV_Mamadou_Ndiaye_LO.pdf" download>Télécharger mon CV ↓</a><a class="button outline-light" href="mailto:mamadoundiayelo60@gmail.com">M’écrire par e-mail ↗</a><a class="button outline-light" href="https://www.linkedin.com/in/mamadou-ndiaye-lo-67bb0017b" target="_blank" rel="noopener">LinkedIn ↗</a></div>
         <div class="contact-meta"><span>Calais, France</span><a href="tel:+33749108498">+33 7 49 10 84 98</a><a href="mailto:mamadoundiayelo60@gmail.com">mamadoundiayelo60@gmail.com</a></div>
       </div>
     </section>
   </main>
+
+  <div class="media-modal" id="media-modal" hidden role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
+    <button class="media-modal-close" type="button" aria-label="Fermer l’aperçu">×</button>
+    <figure><img class="media-modal-image" src="" alt=""><figcaption id="media-modal-title"></figcaption></figure>
+  </div>
 
   <footer><div class="shell"><span>© 2026 Mamadou Ndiaye LO</span><span>Géomatique · Data · SIG</span><a href="#accueil">Retour en haut ↑</a></div></footer>
   <script src="script.js"></script>
